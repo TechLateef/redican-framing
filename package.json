@@ -28,7 +28,6 @@
     ]
   },
   "eslintConfig": {
-    "extends": "eda/react",
     "ignorePatterns": [
       "bundle.js"
     ]
