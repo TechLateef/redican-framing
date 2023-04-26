@@ -1,7 +1,13 @@
 import React from "react"
 import Nav from "./subcomponents/Nav"
+import { fetchShopItems } from "../api/shopItems"
 
 export default function Shop() {
+    window.onload = async (e) => {
+        e.preventDefault()
+        const data = await fetchShopItems()
+        console.log('component data: ', data)
+    }
     return(
         <>
         <h1>shop</h1>
