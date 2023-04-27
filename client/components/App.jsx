@@ -7,6 +7,8 @@ import { Route, Routes } from 'react-router-dom'
 
 const App = () => {
   return (
+    <>
+    <img src="images/thumbnails/logo.jpg" alt="logo" className="logo"></img>
     <div>
       <Routes>
         <Route path="/" element={<Home />} />
@@ -15,6 +17,7 @@ const App = () => {
         <Route path='/store' element={<Shop />} />
       </Routes>
     </div>
+    </>
   )
 }
 
