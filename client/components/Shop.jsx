@@ -18,10 +18,10 @@ export default function Shop() {
                 console.trace()
                 console.error(err)
             })
-        setLoading(false)
-            // if(data != []) {
-            //     setLoading(false)
-            // }
+        
+            if(data != []) {
+                setLoading(false)
+            }
 
         }, 2000);
     }
