@@ -1,7 +1,9 @@
 import React from "react"
+import { useNavigate } from "react-router-dom"
 
 export default function ShopContainer({data}) {
 
+    const navigate = useNavigate();
     const products = [...data]
 
     function handleClick(e) {
@@ -11,7 +13,7 @@ export default function ShopContainer({data}) {
             return product.valid_id == e.target.id || product.valid_id == e.target.parentNode.id
         })
 
-        console.log('match: ', findMatch)
+        navigate(`/store/${findMatch.title}`, {state: findMatch})
     }
     
     return(

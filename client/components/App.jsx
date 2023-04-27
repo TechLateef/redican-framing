@@ -3,6 +3,7 @@ import Home from './Home'
 import Contact from './Contact'
 import About from './About'
 import Shop from './Shop'
+import ShopItem from './subcomponents/ShopItem'
 import { Route, Routes } from 'react-router-dom'
 
 const App = () => {
@@ -15,6 +16,7 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path='/store' element={<Shop />} />
+        <Route path='/store/:title' element={<ShopItem />} />
       </Routes>
     </div>
     </>
