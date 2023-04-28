@@ -1,5 +1,5 @@
 import React from "react"
-import { useNavigate } from "react-router-dom"
+import { Link, Outlet, useNavigate } from "react-router-dom"
 
 export default function ShopContainer({data}) {
 
@@ -37,6 +37,8 @@ export default function ShopContainer({data}) {
                 <p>Refresh the page and try again, if the problem persists come check back in with us soon.</p>
             </>
             }
+            <Link to="/contact">Contact us.</Link>
+            <Outlet />
         </div>
         </>
     )
