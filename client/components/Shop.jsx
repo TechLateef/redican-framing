@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React, {useState, useEffect} from "react"
 import Nav from "./subcomponents/Nav"
 import ShopContainer from "./subcomponents/ShopContainer"
 import { fetchShopItems } from "../api/shopItems"
@@ -7,24 +7,27 @@ export default function Shop() {
     const [data, setData] = useState([])
     const [loading, setLoading] = useState(true)
 
-    window.onload = (e) => {
-        e.preventDefault()
-        setTimeout(() => {
-            fetchShopItems()
-            .then((res) => {
-                return setData(res)
-            })
-            .catch((err) => {
-                console.trace()
-                console.error(err)
-            })
+    useEffect(() => {
         
-            if(data != []) {
-                setLoading(false)
-            }
+            setTimeout(() => {
+                fetchShopItems()
+                .then((res) => {
+                    return setData(res)
+                })
+                .catch((err) => {
+                    console.trace()
+                    console.error(err)
+                })
+            
+                if(data != []) {
+                    setLoading(false)
+                }
+    
+            }, 2000);
+        
 
-        }, 2000);
-    }
+    }, [])
+
 
     return(
         <>
