@@ -9,10 +9,10 @@
     "dev": "node server",
     "start": "run-p dev:client dev:server",
     "dev:client": "npm run webpack -- --watch",
-    "dev:server": "nodemon --watch server src/index.js",
+    "dev:server": "nodemon src/index.js",
     "build": "run-p build:client build:server",
     "build:client": "npm run webpack -- --mode production",
-    "build:server": "nodemon server",
+    "build:server": "nodemon src",
     "lint": "eslint --ext .js,.jsx .",
     "webpack": "webpack --config ./client/webpack.config.js"
   },
