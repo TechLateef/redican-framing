@@ -1,4 +1,8 @@
-.logo {
+#logo {
+    /* background-size: 150px;
+    background-image: url("images/thumbnails/logo.jpg");
+    width: 300px;
+    height: 300px; */
     width: 20%;
 }
 

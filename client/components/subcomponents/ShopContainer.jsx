@@ -13,7 +13,7 @@ export default function ShopContainer({data}) {
             return product.valid_id == e.target.id || product.valid_id == e.target.parentNode.id
         })
 
-        navigate(`/store/${findMatch.title}`, {state: findMatch})
+        navigate(`/${findMatch.title}`, {state: findMatch})
     }
     
     return(

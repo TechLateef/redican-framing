@@ -9,14 +9,14 @@ import { Route, Routes } from 'react-router-dom'
 const App = () => {
   return (
     <>
-    <img src="images/thumbnails/logo.jpg" alt="logo" className="logo"></img>
+    <img src='images/thumbnails/logo.jpg' alt='logo' id="logo"></img>
     <div>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path='/store' element={<Shop />} />
-        <Route path='/store/:title' element={<ShopItem />} />
+        <Route path='/:title' element={<ShopItem />} />
       </Routes>
     </div>
     </>
